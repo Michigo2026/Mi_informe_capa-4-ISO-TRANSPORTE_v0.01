@@ -1,0 +1,193 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Fondo general de la web */
+body {
+    background-color: #e8eaed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+    color: #000;
+}
+
+/* Contenedor que simula la hoja tamaño carta */
+.hoja {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 21.59cm;
+    min-height: 27.94cm;
+    padding-top: 3cm;
+    padding-bottom: 3cm;
+    padding-right: 3cm;
+    padding-left: 4cm;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    position: relative; 
+}
+
+/* ================= ESTILOS DE LA PORTADA ================= */
+.portada {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 3px solid #003366; 
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea los elementos desde arriba */
+    width: 100%;
+    margin-top: 1cm;
+}
+
+.logo-izq, .logo-der {
+    width: 15%; 
+    display: flex;
+    justify-content: center;
+    margin-top: 0.1cm; /* Micro-ajuste para que la punta del logo quede a la altura del texto */
+}
+
+.logo-izq img, .logo-der img {
+    width: 100%;
+    max-width: 40px; /* Tamaño reducido a 40px */
+    height: auto;
+}
+
+.texto-institucional {
+    width: 70%; 
+    text-align: center;
+    font-size: 12pt;
+    line-height: 1.6;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.texto-institucional p {
+    margin-bottom: 4px;
+}
+
+/* El resto del CSS se mantiene igual... */
+.titulo-principal {
+    text-align: center;
+    margin-top: 3cm;
+    margin-bottom: 3cm;
+}
+
+.titulo-principal h1 {
+    font-size: 32pt;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.pie-portada {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12pt;
+    width: 100%;
+    padding-bottom: 1cm;
+}
+
+.columna-izquierda, .columna-derecha {
+    width: 48%;
+    line-height: 1.5;
+}
+
+.columna-derecha {
+    text-align: right;
+}
+
+.pie-portada strong {
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* ================= ESTILOS DEL CONTENIDO ================= */
+.contenido {
+    page-break-before: always; 
+}
+
+.numero-pagina {
+    position: absolute;
+    bottom: 1.5cm; 
+    left: 0;
+    right: 0;
+    text-align: center; 
+    font-size: 12pt;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contenido h2 {
+    text-align: center;
+    font-size: 18pt;
+    margin-bottom: 1.5cm;
+    margin-top: 0.5cm;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.contenido p {
+    text-align: justify;
+    font-size: 12pt;
+    line-height: 1.5;
+    text-indent: 1.25cm; 
+    margin-bottom: 0.6cm;
+}
+
+/* Ajustes para cuando se imprima o guarde como PDF */
+@media print {
+    body {
+        background-color: #fff;
+        padding: 0;
+        display: block;
+    }
+    .hoja {
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        min-height: auto;
+        padding-top: 3cm;
+        padding-bottom: 3cm;
+        padding-right: 3cm;
+        padding-left: 4cm;
+    }
+    .portada {
+        height: 100vh;
+    }
+    .numero-pagina {
+        bottom: 1cm;
+    }
+}
+
+/* Diseño responsive para móviles */
+@media (max-width: 768px) {
+    .hoja {
+        padding: 2cm 1.5cm;
+        min-height: auto;
+    }
+    .titulo-principal h1 {
+        font-size: 24pt;
+    }
+    .pie-portada {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .columna-izquierda, .columna-derecha {
+        width: 100%;
+        text-align: left;
+    }
+    .numero-pagina {
+        bottom: 1cm;
+    }
+}

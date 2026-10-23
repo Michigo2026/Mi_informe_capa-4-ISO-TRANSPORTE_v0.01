@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe - Capa 4 de ISO (Transporte) - UNEFA</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+
+    <!-- ================= HOJA 1: PORTADA ================= -->
+    <div class="hoja portada">
+        
+        <header class="encabezado">
+            <!-- Logo Izquierdo -->
+            <div class="logo-izq">
+                <img src="Logo-Unefa.png" alt="Escudo UNEFA">
+            </div>
+
+            <!-- Texto Central -->
+            <div class="texto-institucional">
+                <p>República Bolivariana de Venezuela</p>
+                <p>Ministerio del Poder Popular Para la Defensa</p>
+                <p>Universidad Nacional Experimental Politécnica de la</p>
+                <p>Fuerza Armada Nacional</p>
+                <p>UNEFA - Núcleo Guárico</p>
+                <p>Ingeniería de Sistemas - VIII Semestre</p>
+            </div>
+
+            <!-- Logo Derecho -->
+            <div class="logo-der">
+                <img src="Logo-Unefa.png" alt="Escudo UNEFA">
+            </div>
+        </header>
+
+        <main class="titulo-principal">
+            <h1>Capa 4 de ISO<br>(Transporte)</h1>
+        </main>
+
+        <footer class="pie-portada">
+            <div class="columna-izquierda">
+                <strong>Profesor:</strong>
+                <p>Raul Blanco</p>
+            </div>
+            <div class="columna-derecha">
+                <strong>Bachiller:</strong>
+                <p>Michael González</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ================= HOJA 2: CONTENIDO PARTE 1 ================= -->
+    <div class="hoja contenido">
+        <h2>La Capa de Transporte</h2>
+
+        <p>La capa de transporte, situada como el cuarto nivel del modelo de referencia OSI, cumple un rol fundamental en la arquitectura de redes al garantizar la comunicación lógica de extremo a extremo entre los procesos de las aplicaciones que se ejecutan en diferentes sistemas terminales. Mientras que las capas inferiores se encargan del direccionamiento y el enrutamiento físico, la capa de transporte se desentiende de la topología de la red para enfocarse en asegurar que la información llegue de manera íntegra y ordenada.</p>
+
+        <p>Para lograr esto, procesa el flujo de datos proveniente de las capas superiores organizándolos en paquetes o unidades lógicas (conocidas técnicamente como segmentos en TCP o datagramas en UDP), gestionando la entrega directa entre aplicaciones. Entre las funciones esenciales que desempeña esta capa destacan el control de flujo, el control de errores y la multiplexación. El control de flujo previene que un emisor rápido sature la capacidad de procesamiento o almacenamiento de un receptor mediante mecanismos de ventanas deslizantes.</p>
+
+        <p>El control de errores utiliza sumas de verificación y técnicas de retransmisión para asegurar que los paquetes de datos no lleguen corrompidos, perdidos o duplicados. Asimismo, mediante el uso de puertos lógicos, la capa de transporte permite la multiplexación y desmultiplexación, posibilitando que múltiples aplicaciones compartan simultáneamente la misma conexión de red sin interferir entre sí al identificar unívocamente cada proceso. Esto es lo que permite que, por ejemplo, puedas descargar un archivo por FTP mientras navegas por la web o escuchas música en streaming sin que los datos se mezclen.</p>
+
+        <div class="numero-pagina">1</div>
+    </div>
+
+    <!-- ================= HOJA 3: CONTENIDO PARTE 2 ================= -->
+    <div class="hoja contenido">
+        <p>Para satisfacer las diversas necesidades de las aplicaciones, la capa de transporte sustenta su funcionamiento principalmente en dos protocolos: el Protocolo de Control de Transmisión (TCP) y el Protocolo de Datagramas de Usuario (UDP). TCP ofrece un servicio orientado a conexión y altamente confiable, implementando un establecimiento de conexión en tres pasos (<em>three-way handshake</em>) y control de congestión, ideal para transferencias críticas como la carga de páginas web o el envío de correos electrónicos.</p>
+
+        <p>TCP garantiza que todos los bytes enviados lleguen a su destino en el mismo orden en que fueron enviados. Si un segmento se pierde en el camino, TCP lo retransmite. Sin embargo, esta fiabilidad tiene un costo en términos de rendimiento y latencia. En contraparte, UDP opera sin conexión y proporciona un servicio no orientado a la fiabilidad de tipo "mejor esfuerzo", eliminando la sobrecarga de control para reducir la latencia al mínimo. UDP es óptimo para transmisiones en tiempo real como streaming de video, VoIP o videojuegos en línea, donde es preferible perder un paquete ocasionalmente a tener que esperar por la retransmisión.</p>
+
+        <p>En conclusión, la capa de transporte actúa como el núcleo lógico que dota de confiabilidad y control al intercambio de información. Al gestionar los paquetes y los mecanismos de entrega de extremo a extremo, constituye un pilar indispensable para balancear de manera óptima los requerimientos de velocidad, integridad y control en los sistemas telemáticos modernos.</p>
+
+        <div class="numero-pagina">2</div>
+    </div>
+
+</body>
+</html>
